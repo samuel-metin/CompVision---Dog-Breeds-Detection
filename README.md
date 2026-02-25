@@ -4,7 +4,7 @@
 
 Ce projet étudie la détection multi-classes fine-grained sur le Stanford Dogs Dataset. L’objectif est de détecter et classifier plusieurs races de chiens dans des images en adaptant un modèle Faster R-CNN pré-entraîné. En effet, ce modèle pré-entraîné (sur COCO) est capable de détecter et classifier des objets généraux (chiens, personnes, voitures, camions, etc.), mais il ne peut pas distinguer des races spécifiques de chiens.
 
-Le modèle est affiné (fine-tuned) en ne dégelant que la quatrième couche du backbone ainsi que les ROI heads, ce qui réduit significativement le temps d'entraînement. Ainsi, l’entraînement complet n'a duré qu'une dizaine de dix minutes. Bien que les performances puissent être améliorées grâce à davantage de data augmentation, la configuration actuelle fournit déjà des résultats satisfaisants et démontre l’efficacité d’un fine-tuning partiel.
+Le modèle est affiné (fine-tuned) en ne dégelant que la quatrième couche du backbone ainsi que les ROI heads, ce qui réduit significativement le temps d'entraînement. Ainsi, l’entraînement complet n'a duré qu'une dizaine de dix minutes. Bien que les performances puissent être améliorées grâce à de la data augmentation, la configuration actuelle fournit déjà des résultats satisfaisants et démontre l’efficacité d’un fine-tuning partiel.
 
 Les performances sont évaluées à l’aide de métriques de type COCO, notamment la mean Average Precision (mAP) calculée sur plusieurs seuils d’IoU. Enfin, l’inspection visuelle confirme un positionnement précis des bounding boxes ainsi qu’une grande précision de classification sur la majorité des images de test.
 
